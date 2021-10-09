@@ -56,4 +56,8 @@ h1, h2, h3, h4, h5, h6 {
 code, code[class*="language-"], pre[class*="language-"]{
   font-family: 'Comic Mono', monospace;
 }
+
+*:not(pre)>code{
+  background-color: #bde7fd;
+}
 </style>
