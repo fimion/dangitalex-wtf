@@ -44,6 +44,12 @@ export default {
   </div>
 </template>
 
+<style scoped>
+header{
+  transform: rotateZ(0.5deg) translateY(3px);
+}
+</style>
+
 <style>
 html, body {
   font-family: 'Grandstander', sans-serif;
