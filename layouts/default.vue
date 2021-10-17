@@ -69,6 +69,7 @@ code, code[class*="language-"], pre[class*="language-"]{
 
 a{
   color: #00f;
+
   &:hover,&:visited,&:link,&:focus{
     color: #00f;
   }
@@ -78,6 +79,7 @@ header{
   a{
     color: #fff;
     filter: drop-shadow(0 2px 5px #004a4a) drop-shadow(0 2px 1px #003a3a);
+
     &:hover,&:visited,&:link,&:focus{
       color: #fff;
     }
