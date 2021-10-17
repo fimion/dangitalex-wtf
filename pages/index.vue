@@ -1,6 +1,6 @@
 <template>
   <div class="article-list">
-    <article v-for='project in projects' :key='project.path'>
+    <article v-for='project in projects' :key='project.path' :style="`--angle:${getAngle()}deg`">
       <div class='article-content'>
         <nuxt-link :to='project.path'>{{ project.title }}</nuxt-link>
         <p>{{ project.description }}</p>
@@ -19,6 +19,11 @@ export default {
 
     return { projects }
 
+  },
+  methods:{
+    getAngle(){
+      return ((Math.random() - 0.5) * 3);
+    }
   }
 }
 </script>
@@ -39,35 +44,20 @@ export default {
   }
 }
 
-
-article{
-  border-radius: 10px;
-  border: 5px black ridge;
-  padding: 15px;
+.article-list{
+  --angle: 0;
 }
 
-article:nth-child(2n){
-  transform: rotateZ(-0.5deg);
-}
+@media screen and (prefers-reduced-motion: no-preference) {
+  article {
+    transition: transform 0.3s ease-in-out;
+    transform: rotateZ(var(--angle, 0));
+  }
 
-article:nth-child(2n)>.article-content{
-  transform: rotateZ(0.5deg);
-}
-
-article:nth-child(2n-1){
-  transform: rotateZ(0.7deg);
-}
-
-article:nth-child(2n-1)>.article-content{
-  transform: rotateZ(-0.7deg);
-}
-
-article:nth-child(3n){
-  transform: rotateZ(-0.7deg);
-}
-
-article:nth-child(3n)>.article-content{
-  transform: rotateZ(0.7deg);
+  .article-content {
+    transition: transform 0.3s ease-in-out;
+    transform: rotateZ(calc(var(--angle, 0) * -1));
+  }
 }
 
 
