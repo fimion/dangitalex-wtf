@@ -31,7 +31,7 @@
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^7.12.1",
     "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
+    "lint-staged": "^13.0.1",
     "prettier": "^2.5.1",
     "sass": "^1.43.5",
     "sass-loader": "^10.2.0",
