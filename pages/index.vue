@@ -1,31 +1,26 @@
 <template>
-  <div class="article-list">
-    <article v-for='project in projects' :key='project.path' :style="`--angle:${getAngle()}deg`">
+  <div class="article-list" v-if="!projects.pending">
+    <article v-for="project in projects.data"
+             :key="project._path"
+             :style="`--angle:${getAngle()}deg`">
       <div class='article-content'>
-        <nuxt-link :to='project.path'>{{ project.title }}</nuxt-link>
+        <nuxt-link :to='project._path'>{{ project.title }}</nuxt-link>
         <p>{{ project.description }}</p>
       </div>
     </article>
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData({ $content }) {
-    const projects = await $content('is')
-      .only(['title', 'description', 'path'])
-      .sortBy('updatedAt', 'desc')
-      .fetch()
+<script setup>
+const projects = reactive(await useAsyncData('is', ()=>queryContent('is')
+      .only(['title', 'description', '_path'])
+      .sort({'updatedAt': -1})
+      .find()));
 
-    return { projects }
-
-  },
-  methods:{
-    getAngle(){
-      return ((Math.random() - 0.5) * 3);
-    }
-  }
+function getAngle(){
+  return ((Math.random() - 0.5) * 3);
 }
+
 </script>
 
 <style scoped>
@@ -59,6 +54,4 @@ export default {
     transform: rotateZ(calc(var(--angle, 0) * -1));
   }
 }
-
-
 </style>
