@@ -58,6 +58,7 @@ export default {
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,2048,30,1.25,7,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
+  // Font Sizes
   --step-0: clamp(1.13rem, calc(0.99rem + 0.69vw), 1.88rem);
   --step-1: clamp(1.35rem, calc(1.17rem + 0.92vw), 2.34rem);
   --step-2: clamp(1.62rem, calc(1.38rem + 1.21vw), 2.93rem);
@@ -66,14 +67,45 @@ export default {
   --step-5: clamp(2.80rem, calc(2.26rem + 2.71vw), 5.72rem);
   --step-6: clamp(3.36rem, calc(2.66rem + 3.51vw), 7.15rem);
   --step-7: clamp(4.03rem, calc(3.12rem + 4.55vw), 8.94rem);
+  // Font Families
   --ff-serif: "Lora", serif;
   --ff-sans-serif: "Lato", sans-serif;
   --ff-mono: 'Comic Mono', monospace;
+  // Colors
+  // Blues
+  --c-blue-400: #00f;
+  // Cyans
+  --c-cyan-100: #ccffff;
+  --c-cyan-200: #b3ffff;
+  --c-cyan-300: #99ffff;
+  --c-cyan-400: #7FFFFF;
+  --c-cyan-500: #66f1f1;
+  --c-cyan-600: #4dd8d8;
+  --c-cyan-700: #33bebe;
+  --c-cyan-800: #1aa5a5;
+  --c-cyan-900: #008b8b;
+  --c-cyan-950: #004a4a;
+  --c-cyan-975: #003a3a;
+  // Grays
+  --c-white: #ffffff;
+  --c-gray-100: #e6e6e6;
+  --c-gray-200: #cccccc;
+  --c-gray-300: #b3b3b3;
+  --c-gray-400: #999999;
+  --c-gray-500: #808080;
+  --c-gray-600: #666666;
+  --c-gray-700: #4d4d4d;
+  --c-gray-800: #333333;
+  --c-gray-900: #1a1a1a;
+  --c-black: #000000;
+
+  // drop shadows
+  --ds-cyan-900: drop-shadow(0 0.1em 0.25em var(--c-cyan-950)) drop-shadow(0 0.1em 0.05em var(--c-cyan-975));
 }
 
 html, body {
   font-family: var(--ff-sans-serif);
-  background-color: darkcyan;
+  background-color: var(--c-cyan-900);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -108,20 +140,20 @@ h6,.h6{
 }
 
 a{
-  color: #00f;
+  color: var(--c-blue-400);
 
   &:hover,&:visited,&:link,&:focus{
-    color: #00f;
+    color: var(--c-blue-400);
   }
 }
 
 header{
   a{
-    color: #fff;
-    filter: drop-shadow(0 0.1em 0.25em #004a4a) drop-shadow(0 0.1em 0.05em #003a3a);
+    color: var(--c-white);
+    filter: var(--ds-cyan-900);
 
     &:hover,&:visited,&:link,&:focus{
-      color: #fff;
+      color: var(--c-white);
     }
   }
 }
@@ -129,15 +161,15 @@ header{
 
 
 *:not(pre)>code{
-  background-color: #bde7fd;
+  background-color: var(--c-cyan-200);
 }
 
 article{
   margin-bottom: 0.6em;
   border-radius: 0.5em;
-  border: 0.3em deeppink ridge;
-  background-color: white;
+  border: 0.333em var(--c-gray-200) ridge;
+  background-color: var(--c-white);
   padding: 0.75em;
-  filter: drop-shadow(0 0.1em 0.25em #004a4a)  drop-shadow(0 0.1em 0.05em #003a3a);
+  filter: var(--ds-cyan-900);
 }
 </style>
