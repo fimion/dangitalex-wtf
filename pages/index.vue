@@ -4,7 +4,7 @@
              :key="project._path"
              :style="`--angle:${getAngle()}deg`">
       <div class='article-content'>
-        <nuxt-link :to='project._path'>{{ project.title }}</nuxt-link>
+        <h2><nuxt-link :to='project._path'>{{ project.title }}</nuxt-link></h2>
         <p>{{ project.description }}</p>
       </div>
     </article>
@@ -28,8 +28,7 @@ function getAngle(){
   .article-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    grid-auto-rows: 200px;
+    grid-gap: 1em;
   }
 }
 
@@ -51,7 +50,7 @@ function getAngle(){
 
   .article-content {
     transition: transform 0.3s ease-in-out;
-    transform: rotateZ(calc(var(--angle, 0) * -1));
+    transform: rotateZ(calc(var(--angle, 0) * -0.4));
   }
 }
 </style>

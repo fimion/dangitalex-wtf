@@ -68,6 +68,7 @@ export default {
   --step-7: clamp(4.03rem, calc(3.12rem + 4.55vw), 8.94rem);
   --ff-serif: "Lora", serif;
   --ff-sans-serif: "Lato", sans-serif;
+  --ff-mono: 'Comic Mono', monospace;
 }
 
 html, body {
@@ -80,7 +81,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 code, code[class*="language-"], pre[class*="language-"]{
-  font-family: 'Comic Mono', monospace;
+  font-family: var(--ff-mono);
+}
+
+body{
+  font-size: var(--step-0);
+}
+
+h1,.h1{
+  font-size: var(--step-5);
+}
+h2,.h2{
+  font-size: var(--step-4);
+}
+h3,.h3{
+  font-size: var(--step-3);
+}
+h4,.h4{
+  font-size: var(--step-2);
+}
+h5,.h5{
+  font-size: var(--step-1);
+}
+h6,.h6{
+  font-size: var(--step-0);
 }
 
 a{
@@ -94,7 +118,7 @@ a{
 header{
   a{
     color: #fff;
-    filter: drop-shadow(0 2px 5px #004a4a) drop-shadow(0 2px 1px #003a3a);
+    filter: drop-shadow(0 0.1em 0.25em #004a4a) drop-shadow(0 0.1em 0.05em #003a3a);
 
     &:hover,&:visited,&:link,&:focus{
       color: #fff;
@@ -109,11 +133,11 @@ header{
 }
 
 article{
-  margin-bottom: 8px;
-  border-radius: 10px;
-  border: 5px deeppink ridge;
+  margin-bottom: 0.6em;
+  border-radius: 0.5em;
+  border: 0.3em deeppink ridge;
   background-color: white;
-  padding: 15px;
-  filter: drop-shadow(0 2px 5px #004a4a)  drop-shadow(0 2px 1px #003a3a);
+  padding: 0.75em;
+  filter: drop-shadow(0 0.1em 0.25em #004a4a)  drop-shadow(0 0.1em 0.05em #003a3a);
 }
 </style>
