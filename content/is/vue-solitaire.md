@@ -1,6 +1,7 @@
 ---
 title: Vue Solitaire
 description: A solitaire game written with Vue and Vuex
+publishDate: 2023-02-03T00:00:00
 ---
 
 This game was written as a response to 2 issues.

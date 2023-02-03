@@ -1,4 +1,7 @@
 <template>
+<!--  <article>
+    <pre>{{projects.data}}</pre>
+  </article>-->
   <div class="article-list" v-if="!projects.pending">
     <article v-for="project in projects.data"
              :key="project._path"
@@ -13,8 +16,8 @@
 
 <script setup>
 const projects = reactive(await useAsyncData('is', ()=>queryContent('is')
-      .only(['title', 'description', '_path'])
-      .sort({'updatedAt': -1})
+      //.only(['title', 'description', '_path'])
+      .sort({'publishDate': -1})
       .find()));
 
 function getAngle(){
