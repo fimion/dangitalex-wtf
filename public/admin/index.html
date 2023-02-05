@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <script src="https://unpkg.com/@staticcms/app@^1.2.0/dist/static-cms-app.js"></script>
+</head>
+<body>
+<!-- Include the script that builds the page and powers Static CMS -->
+
+<script>
+  const config = {
+    backend: {
+      name: 'github',
+      repo: 'fimion/dangitalex-wtf',
+      branch: 'main'
+    },
+    logo_url:'/favicon.svg',
+    media_folder: "public/uploads",
+    public_folder: "/uploads",
+    site_url: "https://dangitalex.wtf",
+    display_url: "https://dangitalex.wtf",
+    collections:[
+      {
+        name: "projects",
+        label: "Projects",
+        label_singular: "Project",
+        folder: "content/is",
+        create: true,
+        slug: "{{slug}}",
+        summary: "{{publishDate}} - {{title}}",
+        sortable_fields: {
+          fields:['publishDate'],
+          default:{
+            field: 'publishDate',
+            direction: 'Descending'
+          }
+        },
+        fields:[
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Description", name: "description", widget: "string"},
+          {label: "Publish Date", name: "publishDate", widget: "datetime"},
+          {label: "Draft", name: "_draft", widget: "boolean", default: true},
+          {
+            label: "Body",
+            name: "body",
+            widget: "markdown",
+          },
+        ]
+      }
+    ]
+  }
+  window.CMS.init({config});
+</script>
+</body>
+</html>
