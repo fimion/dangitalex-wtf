@@ -1,3 +1,18 @@
+<script setup>
+const projects = reactive(await useAsyncData('is', ()=>queryContent('is')
+  //.only(['title', 'description', '_path'])
+  .sort({'publishDate': -1})
+  .find()));
+
+useHead({
+  title:"Alex's Very Professional Portfolio",
+})
+
+function getAngle(){
+  return ((Math.random() - 0.5) * 3);
+}
+
+</script>
 <template>
   <NuxtLayout>
 <!--  <article>
@@ -14,22 +29,8 @@
       </div>
     </article>
   </div>
-
   </NuxtLayout>
 </template>
-
-<script setup>
-const projects = reactive(await useAsyncData('is', ()=>queryContent('is')
-      //.only(['title', 'description', '_path'])
-      .sort({'publishDate': -1})
-      .find()));
-
-function getAngle(){
-  return ((Math.random() - 0.5) * 3);
-}
-
-</script>
-
 <style scoped>
 @media screen and (min-width: 640px){
   .article-list{

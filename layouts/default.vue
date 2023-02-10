@@ -1,34 +1,30 @@
-<script>
-export default {
-  head() {
-    return {
-      link: [
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.googleapis.com'
-        },
-        {
-          rel: 'preconnect',
-          href: 'https://fonts.gstatic.com',
-          crossorigin: true,
-        },
-        {
-          rel: 'preconnect',
-          href: 'https://cdn.jsdelivr.net/',
-          crossorigin: true,
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap'
-        },
-        {
-          rel: 'stylesheet',
-          href: 'https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css',
-        }
-      ]
+<script setup>
+useHead({
+  link: [
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.googleapis.com'
+    },
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
+      crossorigin: "anonymous",
+    },
+    {
+      rel: 'preconnect',
+      href: 'https://cdn.jsdelivr.net/',
+      crossorigin: "anonymous",
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css',
     }
-  }
-}
+  ]
+})
 </script>
 
 <template>
@@ -91,8 +87,8 @@ export default {
   --step-6: clamp(2.28rem, calc(1.94rem + 1.69vw), 4.11rem);
   --step-7: clamp(2.57rem, calc(2.13rem + 2.19vw), 4.93rem);
   // Font Families
-  --ff-serif: "Lora", serif;
-  --ff-sans-serif: "Lato", sans-serif;
+  --ff-serif: "Playfair Display", serif;
+  --ff-sans-serif: "Raleway", sans-serif;
   --ff-mono: 'Comic Mono', monospace;
   // Colors
   // Blues
