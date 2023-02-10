@@ -3,6 +3,7 @@
 <!--  <article>
     <pre>{{projects.data}}</pre>
   </article>-->
+
   <div class="article-list" v-if="!projects.pending">
     <article v-for="project in projects.data"
              :key="project._path"
@@ -13,6 +14,7 @@
       </div>
     </article>
   </div>
+
   </NuxtLayout>
 </template>
 
