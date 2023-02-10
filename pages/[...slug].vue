@@ -10,3 +10,8 @@
 <script setup>
 const {page} = useContent()
 </script>
+<style scoped>
+article{
+  max-width: 60ch;
+}
+</style>
