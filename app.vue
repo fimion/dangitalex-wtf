@@ -17,6 +17,6 @@
                 yourself. Get ready to be amazed by my ability to combine
                 professionalism and intentional chaos.</p>
         </ArticleCard>
-        <p class="h5 copyright">Copyright &copy; 2023 Alex Riviere. </p>
+        <p class="h5 copyright">Copyright &copy; 2023 Alex Riviere.</p>
     </footer>
 </template>
