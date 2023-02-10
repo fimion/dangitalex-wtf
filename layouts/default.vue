@@ -29,50 +29,11 @@ useHead({
 
 <template>
   <div class='default-layout'>
-    <header>
-      <h1>
-        <nuxt-link to='/'>Alex's Very Professional Portfolio</nuxt-link>
-      </h1>
-    </header>
     <main>
       <slot />
     </main>
-    <footer>
-      <article class="intro">
-        <div class="article-content">
-          <h2 class="h5">Hi! I'm Alex Riviere, and I make <del>Terrible</del> <ins>Very Professional</ins> websites.</h2>
-          <p>Welcome to my portfolio, where professional expertise meets intentional
-            quirkiness. I am a seasoned professional with a passion for delivering
-            exceptional results and a unique approach to design. My website may
-            appear to be a hot mess, but rest assured that each aspect has been
-            meticulously crafted to showcase my skills and personality. I invite you
-            to take a tour through my portfolio and experience my style for
-            yourself. Get ready to be amazed by my ability to combine
-            professionalism and intentional chaos.</p>
-        </div>
-      </article>
-    </footer>
   </div>
 </template>
-
-<style scoped>
-@media screen and (prefers-reduced-motion: no-preference) {
-  header{
-    transform: rotateZ(0.5deg) translateY(3px);
-  }
-}
-
-.default-layout{
-  display: grid;
-  place-items: center;
-}
-
-.intro{
-  max-width: 60ch;
-}
-
-</style>
-
 <style lang="scss">
 
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.125,2048,22,1.2,7,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -127,7 +88,12 @@ html, body {
   background-color: var(--c-cyan-900);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   font-family: var(--ff-serif);
 }
 
@@ -190,5 +156,22 @@ article{
   background-color: var(--c-white);
   padding: 0.75em;
   filter: var(--ds-cyan-900);
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+  header, .copyright{
+    transform: rotateZ(0.5deg) translateY(3px);
+  }
+}
+
+.default-layout, header, footer{
+  display: grid;
+  place-items: center;
+}
+
+.intro{
+  max-width: 60ch;
+}
+.copyright{
+  color:var(--c-white);
 }
 </style>

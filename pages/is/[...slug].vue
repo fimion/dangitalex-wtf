@@ -1,17 +1,12 @@
 <template>
   <NuxtLayout>
-    <article>
+    <ArticleCard>
       <h1>{{ page.title }}</h1>
       <p>{{ page.description }}</p>
       <ContentDoc />
-    </article>
+    </ArticleCard>
   </NuxtLayout>
 </template>
 <script setup>
 const {page} = useContent()
 </script>
-<style scoped>
-article{
-  max-width: 60ch;
-}
-</style>

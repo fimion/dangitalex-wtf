@@ -7,11 +7,6 @@ const projects = reactive(await useAsyncData('is', ()=>queryContent('is')
 useHead({
   title:"Alex's Very Professional Portfolio",
 })
-
-function getAngle(){
-  return ((Math.random() - 0.5) * 3);
-}
-
 </script>
 <template>
   <NuxtLayout>
@@ -20,14 +15,12 @@ function getAngle(){
   </article>-->
 
   <div class="article-list" v-if="!projects.pending">
-    <article v-for="project in projects.data"
-             :key="project._path"
-             :style="`--angle:${getAngle()}deg`">
-      <div class='article-content'>
+    <ArticleCard angled
+                 v-for="project in projects.data"
+                 :key="project._path">
         <h2><nuxt-link :to='project._path'>{{ project.title }}</nuxt-link></h2>
         <p>{{ project.description }}</p>
-      </div>
-    </article>
+    </ArticleCard>
   </div>
   </NuxtLayout>
 </template>
@@ -48,17 +41,5 @@ function getAngle(){
 
 .article-list{
   --angle: 0;
-}
-
-@media screen and (prefers-reduced-motion: no-preference) {
-  article {
-    transition: transform 0.3s ease-in-out;
-    transform: rotateZ(var(--angle, 0));
-  }
-
-  .article-content {
-    transition: transform 0.3s ease-in-out;
-    transform: rotateZ(calc(var(--angle, 0) * -0.4));
-  }
 }
 </style>
