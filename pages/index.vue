@@ -1,4 +1,5 @@
 <template>
+  <NuxtLayout>
 <!--  <article>
     <pre>{{projects.data}}</pre>
   </article>-->
@@ -12,6 +13,7 @@
       </div>
     </article>
   </div>
+  </NuxtLayout>
 </template>
 
 <script setup>

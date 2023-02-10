@@ -41,6 +41,7 @@ export default {
     <main>
       <slot />
     </main>
+    <footer></footer>
   </div>
 </template>
 
@@ -55,18 +56,17 @@ export default {
 
 <style lang="scss">
 
-/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,2048,30,1.25,7,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.125,2048,22,1.2,7,0,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
-  // Font Sizes
-  --step-0: clamp(1.13rem, calc(0.99rem + 0.69vw), 1.88rem);
-  --step-1: clamp(1.35rem, calc(1.17rem + 0.92vw), 2.34rem);
-  --step-2: clamp(1.62rem, calc(1.38rem + 1.21vw), 2.93rem);
-  --step-3: clamp(1.94rem, calc(1.63rem + 1.59vw), 3.66rem);
-  --step-4: clamp(2.33rem, calc(1.92rem + 2.08vw), 4.58rem);
-  --step-5: clamp(2.80rem, calc(2.26rem + 2.71vw), 5.72rem);
-  --step-6: clamp(3.36rem, calc(2.66rem + 3.51vw), 7.15rem);
-  --step-7: clamp(4.03rem, calc(3.12rem + 4.55vw), 8.94rem);
+  --step-0: clamp(1.13rem, calc(1.08rem + 0.23vw), 1.38rem);
+  --step-1: clamp(1.27rem, calc(1.19rem + 0.36vw), 1.65rem);
+  --step-2: clamp(1.42rem, calc(1.32rem + 0.52vw), 1.98rem);
+  --step-3: clamp(1.60rem, calc(1.46rem + 0.72vw), 2.38rem);
+  --step-4: clamp(1.80rem, calc(1.61rem + 0.97vw), 2.85rem);
+  --step-5: clamp(2.03rem, calc(1.77rem + 1.29vw), 3.42rem);
+  --step-6: clamp(2.28rem, calc(1.94rem + 1.69vw), 4.11rem);
+  --step-7: clamp(2.57rem, calc(2.13rem + 2.19vw), 4.93rem);
   // Font Families
   --ff-serif: "Lora", serif;
   --ff-sans-serif: "Lato", sans-serif;

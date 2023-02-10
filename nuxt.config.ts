@@ -3,5 +3,8 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content'],
   content: {
     documentDriven: true
+  },
+  nitro:{
+    preset:'netlify',
   }
 })
