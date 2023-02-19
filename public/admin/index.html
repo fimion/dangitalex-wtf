@@ -48,20 +48,15 @@
             widget: "markdown",
           },
           {
-            name: "tags",
-            label: "Tags",
-            widget: "list",
-            fields:[
-              {
-                name:'tag',
-                label:'Tag',
-                widget:'relation',
-                collection:'tags',
-                value_field:'{{slug}}',
-                display_fields:['{{title}}'],
-              }
-            ],
-          }
+            name:'tags',
+            label:'Tag',
+            widget:'relation',
+            multiple: true,
+            collection:'tags',
+            value_field:'{{slug}}',
+            display_fields:['{{title}}'],
+            search_fields:['title']
+          },
         ]
       },
       {
