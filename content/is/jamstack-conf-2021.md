@@ -5,11 +5,13 @@ publishDate: 2021-10-07T12:00:43-04:00
 draft: true
 tags:
   - conference-talk
+  - site
 ---
 This was a quick talk I threw together about how I built a joke site at [CSS-TRICKZ](https://css-trickz.com). It leverages many things in the JAMStack.
 
 - [Slides](https://slides.com/fimion/css-trickz-jamstack-conf-2021)
 - [Recording](https://www.youtube.com/watch?v=GEDLKKLIkuU)
+- [CSS-Trickz on github](https://github.com/fimion/css-trickz)
 
 
 
