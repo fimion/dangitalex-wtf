@@ -2,7 +2,7 @@
 title: Geo-Elements
 description: A library of custom elements that remake and improve deprecated
   HTML elements....
-publishDate: 2023-02-05T12:25:34.936-05:00
+publishDate: 2022-02-28T12:00:34-05:00
 draft: false
 tags:
   - library
