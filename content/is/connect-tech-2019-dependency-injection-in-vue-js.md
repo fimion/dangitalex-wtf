@@ -6,7 +6,8 @@ draft: true
 tags:
   - conference-talk
 ---
-
+- [Recording at VueMastery](https://www.vuemastery.com/conferences/connect-tech-2019/dependency-injection-in-vue)
+- [Slide Deck](https://slides.com/fimion/connect-tech-2019)
 
 
 
