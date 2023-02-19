@@ -21,7 +21,7 @@ export default {
   list-style: none;
   padding-inline-start: 0;
   display: flex;
-  gap: 2ch;
+  gap: 1ch;
 }
 .tag{
 
