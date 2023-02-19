@@ -2,7 +2,7 @@
 title: Jamstack Conf 2021
 description: "CSS-TRICKZ: Bad Ideas, and Efficient Ways to Build Them"
 publishDate: 2021-10-07T12:00:43-04:00
-draft: true
+draft: false
 tags:
   - conference-talk
   - site
