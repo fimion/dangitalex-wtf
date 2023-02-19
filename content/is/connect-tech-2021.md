@@ -2,7 +2,7 @@
 title: Connect.tech 2021
 description: Hot NEW Features in Vue 3
 publishDate: 2021-11-09T12:00:45-05:00
-draft: true
+draft: false
 tags:
   - conference-talk
 ---
