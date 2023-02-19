@@ -47,6 +47,45 @@
             name: "body",
             widget: "markdown",
           },
+          {
+            name: "tags",
+            label: "Tags",
+            widget: "list",
+            fields:[
+              {
+                name:'tag',
+                label:'Tag',
+                widget:'relation',
+                collection:'tags',
+                value_field:'{{slug}}',
+                display_fields:['{{title}}'],
+              }
+            ],
+          }
+        ]
+      },
+      {
+        name: "tags",
+        label: "Tags",
+        label_singular: "Tag",
+        folder: "content/tag",
+        create: true,
+        slug: "{{slug}}",
+        summary: "{{title}}",
+        sortable_fields: {
+          fields:['title'],
+          default:{
+            field: 'title',
+            direction: 'Descending'
+          }
+        },
+        fields:[
+          {label: "Title", name: "title", widget: "string"},
+          {
+            label: "Body",
+            name: "body",
+            widget: "markdown",
+          },
         ]
       }
     ]

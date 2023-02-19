@@ -1,4 +1,5 @@
 <template>
+  <div class="body-wrapper">
     <header>
         <h1>
             <nuxt-link to='/'>Alex's Very Professional Portfolio</nuxt-link>
@@ -19,4 +20,5 @@
         </ArticleCard>
         <p class="h5 copyright">Copyright &copy; 2023 Alex Riviere.</p>
     </footer>
+  </div>
 </template>

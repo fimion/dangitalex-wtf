@@ -133,6 +133,9 @@ a{
 }
 
 header{
+  h1{
+    text-align: center;
+  }
   a{
     color: var(--c-white);
     filter: var(--ds-cyan-900);
@@ -163,9 +166,14 @@ article{
   }
 }
 
-.default-layout, header, footer{
+.body-wrapper{
   display: grid;
   place-items: center;
+}
+
+.default-layout, header, footer{
+  max-width: 60ch;
+  width: 100%;
 }
 
 .intro{
@@ -173,5 +181,6 @@ article{
 }
 .copyright{
   color:var(--c-white);
+  text-align: center;
 }
 </style>

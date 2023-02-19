@@ -2,6 +2,8 @@
 title: Alex.party
 description: My super useful blog
 publishDate: 2022-12-31T00:00:00
+tags: 
+ - sites
 ---
 
 Let's talk about.... things!
