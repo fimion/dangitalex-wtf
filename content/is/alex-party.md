@@ -14,5 +14,7 @@ I evaluated my options, and found that [Astro](https://astro.build) was a very e
 my already existing vue components and markdown files. I spent a couple of hours moving things over in late
 2022, and haven't looked back. A+. Super great times.
 
-- [Alex.party](https://alex.party)
+- [Alex.part
+
+This site has been edited using Nuxt Studio.y](https://alex.party)
 - [Github](https://github.com/fimion/alex-party)
