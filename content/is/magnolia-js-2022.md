@@ -9,5 +9,7 @@ tags:
 
 React is one of the most popular front end frameworks... but within the React community there are several misconceptions about Vue. Let's go through and convert a React component into a Vue component. The results might surprise a lot of React developers!
 
-- [Slides](https://slides.com/fimion/magnolia-js-2022)
+- [Slid
+
+This is a little bit trolling of react developers. es](https://slides.com/fimion/magnolia-js-2022)
 - [Recorded Video](https://www.youtube.com/watch?v=6b6T3KN5pRs)
